@@ -1,6 +1,6 @@
-var caselle = ["uno","due","tre","quattro"];
+var caselle = ["uno","due","tre","quattro","cinque","sei","sette","otto","nove","dieci","undici","dodici"];
 var colori = ["#FF3300","orange","#4285F4","#0F9D58"];
-var pos = 50;
+var pos = 10;
 var dir = 1;
 var ind = 0;
 var indSave = 0;
@@ -16,9 +16,9 @@ function verTastoPremuto(e) {
 
 function muoviPallaT(direction) {
 		  pos+=direction;
-      if (pos > 90) pos=90;
-      if (pos < 10) pos=10;
-      document.getElementById("elemento").style.left=pos+"%";
+      if (pos > 15) pos=15;
+      if (pos < 0) pos=0;
+      document.getElementById("elemento").style.top=pos+"%";
 }
 
 function muoviPalla(direction) {
@@ -27,9 +27,9 @@ function muoviPalla(direction) {
 		catch(err){}
     myTimer = setInterval(function() {
 		  pos+=direction;
-      if (pos > 90) pos=90;
-      if (pos < 10) pos=10;
-      document.getElementById("elemento").style.left=pos+"%";
+      if (pos > 16) pos=16;
+      if (pos < 0) pos=0;
+      document.getElementById("elemento").style.top=pos+"%";
 	  }, 24);
 }
 
@@ -44,18 +44,22 @@ function randomIntFromInterval(min,max) {
 
 function disegnaMattoni() {
     coloraMattoni();
-    myTimerBlack = setInterval(coloraMattoni, 4000);
+    myTimerBlack = setInterval(coloraMattoni, 14000);
 }
   
-  
 function coloraMattoni() {
-      while (ind == indSave) {
-          ind=randomIntFromInterval(0,caselle.length - 1);
+   ind_start=0;
+   while (ind_start < 10) {
+      ind=ind_start+randomIntFromInterval(0,2);
+
+      for (step = ind_start; step < ind_start+3; step++) {
+        if (step == ind) {
+           document.getElementById(caselle[step]).style.backgroundColor="black";
+        }
+        else {
+           document.getElementById(caselle[step]).style.backgroundColor="white";
+        }
       }
-      for (step = 0; step < caselle.length; step++) { 
-          document.getElementById(caselle[step]).style.backgroundColor=colori[ind];
-      }
-      document.getElementById(caselle[ind]).style.backgroundColor="black";
-      document.getElementById("elemento").style.backgroundColor=colori[ind];
-      indSave=ind;
+      ind_start+=3;
+   }
 }
