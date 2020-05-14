@@ -9,46 +9,93 @@ html, body {
     user-select: none; /* Standard syntax */
 }
 
+.centro1,.centro2,.centro3,.centro4,.centro_palla,.bordo_esterno {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.centro1 {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.centro2 {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.centro3 {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.centro4 {
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.bordo_esterno {
+  border-radius: 800px;
+  border: 1px solid white;
+  transform: translate(-50%, -50%);
+}
+
+.bordo_interno {
+  width: 438px;
+  height: 438px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 438px;
+  border: 1px solid white;
+  transform: translate(-50%, -50%);
+}
+
+.centro_palla {
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: mymove 14s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes mymove {
+  0%   {transform: translate(-50%, -50%) rotate(0deg);}
+  100% {transform: translate(-50%, -50%) rotate(359deg);}
+}
+
+.barriera {
+  top: 50%;
+  left: 0%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);  
+}
+
 table {
     top: 100%;
     left: 50%;
-    position: absolute;
+    position: relative;
+    border-collapse: collapse;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    animation: mymove 4s infinite;
-    animation-timing-function: linear;
 }
 
 td {
   margin: 0;
   padding: 0;
-  width: 25vw;
-  height: 80px;
+  width: 60px;
+  height: 15px;
   background-color: white;
 }
 
 #elemento {
-    width: 100px;
-    height: 100px;
-    top: 20%;
+    height: 30px;
+    top: 0%;
     left: 50%;
     position: absolute;
-    background-color: orange;
-    border-radius: 100px;
-    /* border: solid 8px white; */
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-#guida {
-    top: 20%;
-    left: 50%;
-    width: 80vw;
-    height: 0;
-    border-top: dotted 5px white;
-    position: absolute;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    /*background-color: orange;*/
+    border-left: 40px solid orange;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 1px solid transparent;
 }
 
 .sinistra {
@@ -64,9 +111,4 @@ td {
     height: 99vh;
     left: 50vw;
     touch-action: none;
-}
-
-@keyframes mymove {
-  0%   {top: 110%;}
-  100% {top: -6vw;}
 }
