@@ -1,25 +1,53 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>downhill</title>
+    <title>track</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="disegnaMattoni()" onkeydown="verTastoPremuto(event)">
-  <div id="guida"></div>
-  <div>
-  <table>
-  <tr>
-    <td id="uno"></td>
-    <td id="due"></td>
-    <td id="tre"></td>
-    <td id="quattro"></td>
-  </tr>
-  </table>
+  <div class="bordo_esterno"></div>
+  <div class="bordo_interno"></div>
+  <div id="prima" class="centro1">
+    <table class="barriera">
+    <tr>
+      <td id="uno"></td>
+      <td id="due"></td>
+      <td id="tre"></td>
+    </tr>
+    </table>
   </div>
-  <div id="elemento"></div>
+  <div id="seconda" class="centro2">
+    <table class="barriera">
+    <tr>
+      <td id="quattro"></td>
+      <td id="cinque"></td>
+      <td id="sei"></td>
+    </tr>
+    </table>
+  </div>
+  <div id="terza" class="centro3">
+    <table class="barriera">
+    <tr>
+      <td id="sette"></td>
+      <td id="otto"></td>
+      <td id="nove"></td>
+    </tr>
+    </table>
+  </div>
+  <div id="quarta" class="centro4">
+    <table class="barriera">
+    <tr>
+      <td id="dieci"></td>
+      <td id="undici"></td>
+      <td id="dodici"></td>
+    </tr>
+    </table>
+  </div>
+  <div class="centro_palla">
+    <div id="elemento"></div>
+  </div>
   <div class="sinistra" ontouchstart="muoviPalla(-1)" ontouchend="resetInt()"></div>
   <div class="destra" ontouchstart="muoviPalla(1)" ontouchend="resetInt()"></div>
-  <script src="downhill.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
