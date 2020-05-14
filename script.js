@@ -1,6 +1,6 @@
 var caselle = ["uno","due","tre","quattro","cinque","sei","sette","otto","nove","dieci","undici","dodici"];
 var colori = ["#FF3300","orange","#4285F4","#0F9D58"];
-var pos = 10;
+var pos = 0;
 var dir = 1;
 var ind = 0;
 var indSave = 0;
@@ -16,7 +16,7 @@ function verTastoPremuto(e) {
 
 function muoviPallaT(direction) {
 		  pos+=direction;
-      if (pos > 15) pos=15;
+      if (pos > 17) pos=17;
       if (pos < 0) pos=0;
       document.getElementById("elemento").style.top=pos+"%";
 }
@@ -27,7 +27,7 @@ function muoviPalla(direction) {
 		catch(err){}
     myTimer = setInterval(function() {
 		  pos+=direction;
-      if (pos > 16) pos=16;
+      if (pos > 17) pos=17;
       if (pos < 0) pos=0;
       document.getElementById("elemento").style.top=pos+"%";
 	  }, 24);
