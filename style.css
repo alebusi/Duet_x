@@ -19,18 +19,26 @@ html, body {
 
 .centro1 {
   transform: translate(-50%, -50%) rotate(0deg);
+  animation: mymove 17s infinite;
+  animation-timing-function: linear;
 }
 
 .centro2 {
   transform: translate(-50%, -50%) rotate(90deg);
+  animation: mymove 20s infinite;
+  animation-timing-function: linear;
 }
 
 .centro3 {
   transform: translate(-50%, -50%) rotate(180deg);
+  animation: mymove 19s infinite;
+  animation-timing-function: linear;
 }
 
 .centro4 {
   transform: translate(-50%, -50%) rotate(270deg);
+  animation: mymove 22s infinite;
+  animation-timing-function: linear;
 }
 
 .bordo_esterno {
@@ -63,26 +71,29 @@ html, body {
 }
 
 .barriera {
-  top: 50%;
-  left: 0%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(0%, -50%);  
-}
-
-table {
-    top: 100%;
-    left: 50%;
+    top: 50%;
+    left: 0%;
     position: relative;
-    border-collapse: collapse;
+    border: 22px solid transparent;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);  
 }
-
+/*
+table {
+    top: 50%;
+    left: 0%;
+    position: relative;
+    /*border-collapse: collapse;
+    border: 22px solid transparent;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);  
+}
+*/
 td {
   margin: 0;
   padding: 0;
-  width: 60px;
-  height: 15px;
+  width: 40px;
+  height: 30px;
   background-color: white;
 }
 
