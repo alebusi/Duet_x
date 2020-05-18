@@ -44,7 +44,7 @@ function randomIntFromInterval(min,max) {
 
 function disegnaMattoni() {
     coloraMattoni();
-    myTimerBlack = setInterval(coloraMattoni, 14000);
+    myTimerBlack = setInterval(coloraMattoni, 60000);
 }
   
 function coloraMattoni() {
@@ -54,10 +54,10 @@ function coloraMattoni() {
 
       for (step = ind_start; step < ind_start+3; step++) {
         if (step == ind) {
-           document.getElementById(caselle[step]).style.backgroundColor="black";
+           document.getElementById(caselle[step]).style.backgroundColor="#ff3300";
         }
         else {
-           document.getElementById(caselle[step]).style.backgroundColor="white";
+           document.getElementById(caselle[step]).style.backgroundColor="black";
         }
       }
       ind_start+=3;
