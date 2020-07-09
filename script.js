@@ -11,16 +11,17 @@ function verTastoPremuto(e) {
   } else if (e.keyCode == 39) {
       dir=1;
   }
-  muoviElemento(dir);
+  muoviElementoT(dir);
+}
+
+function muoviElementoT(direction) {
+    pos+=direction;
+    ruota=pos+"deg";
+    document.getElementById("elemento").style.transform = "rotate(ruota)";
 }
 
 function muoviElemento(direction) {
-		  pos+=direction;
-      document.getElementById("elemento").style.transform = "rotate(20deg)";
-}
-
-function muoviElemento(direction) {
-    /* muoviPallaT(direction); */
+    muoviElementoT(direction);
     try {clearInterval(myTimer);}
 		catch(err){}
     myTimer = setInterval(function() {
