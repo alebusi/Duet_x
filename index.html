@@ -4,10 +4,12 @@
     <title>Hexagon</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="disegnaCerchi()" onkeydown="verTastoPremuto(event)">
+<body onkeydown="verTastoPremuto(event)">
+  <div id="uno" class="cerchio"></div>
+  <div id="due" class="vuota"></div>
   <div class="bordo_interno"></div>
-  <div class="triangolino">
-    <div id="elemento"></div>
+  <div id="elemento" class="triangolino">
+    <div id="elemento2"></div>
   </div>
   <div class="sinistra" ontouchstart="muoviElemento(-1)" ontouchend="resetInt()"></div>
   <div class="destra" ontouchstart="muoviElemento(1)" ontouchend="resetInt()"></div>
