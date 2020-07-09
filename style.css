@@ -9,104 +9,59 @@ html, body {
     user-select: none; /* Standard syntax */
 }
 
-.centro1,.centro2,.centro3,.centro4,.centro_palla,.bordo_esterno {
-  width: 800px;
-  height: 800px;
+.cerchio {
+  width: 1400px;
+  height: 1400px;
+  border-radius: 1400px;
+  border: 10px solid white;
   position: absolute;
   top: 50%;
   left: 50%;
-}
-
-.centro1 {
-  transform: translate(-50%, -50%) rotate(0deg);
-  animation: mymove 17s infinite;
+  transform: translate(-50%, -50%);  
+  animation: mymove_circle 4s infinite;
   animation-timing-function: linear;
+
 }
 
-.centro2 {
-  transform: translate(-50%, -50%) rotate(90deg);
-  animation: mymove 20s infinite;
-  animation-timing-function: linear;
-}
-
-.centro3 {
-  transform: translate(-50%, -50%) rotate(180deg);
-  animation: mymove 19s infinite;
-  animation-timing-function: linear;
-}
-
-.centro4 {
-  transform: translate(-50%, -50%) rotate(270deg);
-  animation: mymove 22s infinite;
-  animation-timing-function: linear;
-}
-
-.bordo_esterno {
-  border-radius: 800px;
-  border: 1px solid white;
-  transform: translate(-50%, -50%);
+@keyframes mymove_circle {
+  0%   {width: 1400px; height: 1400px;}
+  100% {width: 0px; height: 0px;}
 }
 
 .bordo_interno {
-  width: 438px;
-  height: 438px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 2px solid white;
+  background-color: black;
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 438px;
-  border: 1px solid white;
   transform: translate(-50%, -50%);
 }
 
-.centro_palla {
+.triangolino {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  animation: mymove 14s infinite;
-  animation-timing-function: linear;
 }
 
-@keyframes mymove {
-  0%   {transform: translate(-50%, -50%) rotate(0deg);}
-  100% {transform: translate(-50%, -50%) rotate(359deg);}
-}
-
-.barriera {
-    top: 50%;
-    left: 0%;
-    position: relative;
-    border: 22px solid transparent;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(0%, -50%);  
-}
-/*
-table {
-    top: 50%;
-    left: 0%;
-    position: relative;
-    /*border-collapse: collapse;
-    border: 22px solid transparent;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(0%, -50%);  
-}
-*/
-td {
-  margin: 0;
-  padding: 0;
-  width: 40px;
-  height: 30px;
-  background-color: white;
-}
-
-#elemento {
-    height: 30px;
+#elemento2 {
+    height: 0px;
     top: 0%;
     left: 50%;
     position: absolute;
     /*background-color: orange;*/
-    border-left: 40px solid orange;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-right: 1px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 0px solid transparent;
+    border-bottom: 30px solid orange;
+    border-right: 12px solid transparent;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
 }
 
 .sinistra {
