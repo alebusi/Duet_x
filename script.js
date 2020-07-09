@@ -7,17 +7,16 @@ var indSave = 0;
 
 function verTastoPremuto(e) {
   if (e.keyCode == 37) {
-      dir=-1;
+      dir=-3;
   } else if (e.keyCode == 39) {
-      dir=1;
+      dir=3;
   }
   muoviElementoT(dir);
 }
 
 function muoviElementoT(direction) {
-    pos+=direction;
-    ruota=pos+"deg";
-    document.getElementById("elemento").style.transform = "rotate(ruota)";
+		  pos+=direction;
+      document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)"; 
 }
 
 function muoviElemento(direction) {
@@ -26,8 +25,7 @@ function muoviElemento(direction) {
 		catch(err){}
     myTimer = setInterval(function() {
 		  pos+=direction;
-      /* document.getElementById("elemento").style.transform = "translate(-50%, -50%); */
-      document.getElementById("elemento").style.transform = "rotate(pos+'deg')";
+      document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)";
 	  }, 24);
 }
 
