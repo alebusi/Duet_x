@@ -1,9 +1,5 @@
-var caselle = ["uno","due","tre","quattro","cinque","sei","sette","otto","nove","dieci","undici","dodici"];
-var colori = ["#FF3300","orange","#4285F4","#0F9D58"];
 var pos = 0;
-var dir = 1;
-var ind = 0;
-var indSave = 0;
+var dir = 0;
 
 function verTastoPremuto(e) {
   if (e.keyCode == 37) {
@@ -38,24 +34,13 @@ function randomIntFromInterval(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-function disegnaCerchi() {
-    coloraMattoni();
-    myTimerBlack = setInterval(coloraMattoni, 60000);
+function disegnaCerchio() {
+    bucaCerchio();
+    myTimerCerchio = setInterval(bucaCerchio, 4000);
 }
   
-function coloraMattoni() {
-   ind_start=0;
-   while (ind_start < 10) {
-      ind=ind_start+randomIntFromInterval(0,2);
-
-      for (step = ind_start; step < ind_start+3; step++) {
-        if (step == ind) {
-           document.getElementById(caselle[step]).style.backgroundColor="#ff3300";
-        }
-        else {
-           document.getElementById(caselle[step]).style.backgroundColor="black";
-        }
-      }
-      ind_start+=3;
-   }
+function bucaCerchio() {
+  xpos=randomIntFromInterval(0,359); document.getElementById("uno").style.transform = "translate(-50%, -50%) rotate("+xpos+"deg)"; 
 }
+
+disegnaCerchio();
