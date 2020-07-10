@@ -10,9 +10,9 @@ html, body {
 }
 
 .cerchio {
-  width: 1400px;
-  height: 1400px;
-  border-radius: 1400px;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 1200px;
   border: 10px solid white;
   position: absolute;
   top: 50%;
@@ -24,7 +24,7 @@ html, body {
 }
 
 @keyframes mymove_circle {
-  0%   {width: 1400px; height: 1400px;}
+  0%   {width: 1200px; height: 1200px;}
   100% {width: 0px; height: 0px;}
 }
 
