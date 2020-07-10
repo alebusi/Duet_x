@@ -3,9 +3,9 @@ var dir = 0;
 
 function verTastoPremuto(e) {
   if (e.keyCode == 37) {
-      dir=-3;
+      dir=-6;
   } else if (e.keyCode == 39) {
-      dir=3;
+      dir=6;
   }
   muoviElementoT(dir);
 }
@@ -22,7 +22,7 @@ function muoviElemento(direction) {
     myTimer = setInterval(function() {
 		  pos+=direction;
       document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)";
-	  }, 20);
+	  }, 60);
 }
 
 function resetInt() {
