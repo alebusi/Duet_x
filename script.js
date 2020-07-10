@@ -26,7 +26,7 @@ function muoviElemento(direction) {
     myTimer = setInterval(function() {
 		  pos+=direction;
       document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)";
-	  }, 24);
+	  }, 20);
 }
 
 function resetInt() {
