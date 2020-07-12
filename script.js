@@ -1,18 +1,38 @@
 var pos = 0;
 var dir = 0;
+kd = false;
 
-function verTastoPremuto(e) {
-  if (e.keyCode == 37) {
-      dir=-6;
-  } else if (e.keyCode == 39) {
-      dir=6;
+window.addEventListener("keydown", keypress_handler, false);
+window.addEventListener("keyup", keyup_handler, false);
+
+function keypress_handler(event) {
+  if (event.keyCode == 37 || event.keyCode == 39) { 
+    if (!this.kd) {
+	this.kd = true;
+        if (event.keyCode == 37) {
+          dir = -6;
+        }
+        if (event.keyCode == 39) {
+          dir = 6;
+        }
+        sterza = setInterval(function() {
+		muoviElementoT(dir);
+		}, 60);
+    }
+  }	
+}
+
+function keyup_handler(event) {
+  if (event.keyCode == 37 || event.keyCode == 39) {
+        this.kd = false;
+	    try {clearInterval(sterza);}
+		catch{}
   }
-  muoviElementoT(dir);
 }
 
 function muoviElementoT(direction) {
-		  pos+=direction;
-      document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)"; 
+    pos+=direction;
+    document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)"; 
 }
 
 function muoviElemento(direction) {
