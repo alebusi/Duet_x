@@ -13,10 +13,10 @@ html, body {
   width: 840px;
   height: 840px;
   border-radius: 840px;
-  border-top: 10px solid white;
-  border-left: 10px solid #00FFFF;
-  border-right: 10px solid #00FFFF;
-  border-bottom: 10px solid black;
+  border-top: 14px solid orange;
+  border-left: 14px solid orange;
+  border-right: 14px solid orange;
+  border-bottom: 14px solid black;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,11 +32,10 @@ html, body {
 }
 
 .bordo_interno {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  border: 3px solid white;
-  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ff3300;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -44,8 +43,8 @@ html, body {
 }
 
 .triangolino {
-  width: 180px;
-  height: 180px;
+  width: 230px;
+  height: 230px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,10 +58,10 @@ html, body {
     left: 50%;
     position: absolute;
     /*background-color: orange;*/
-    border-left: 12px solid transparent;
+    border-left: 25px solid transparent;
     border-top: 0px solid transparent;
-    border-bottom: 30px solid orange;
-    border-right: 12px solid transparent;
+    border-bottom: 55px solid white;
+    border-right: 25px solid transparent;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, 0%);
 }
