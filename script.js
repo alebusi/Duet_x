@@ -64,3 +64,4 @@ function bucaCerchio() {
 }
 
 disegnaCerchio();
+setTimeout(function(){ document.getElementById("due").className="cerchio"; }, 4000);
