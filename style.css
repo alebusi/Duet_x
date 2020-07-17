@@ -37,8 +37,9 @@ html, body {
 }
 
 @keyframes mymove_circle {
-  0%   {width: 840px; height: 840px;}
-  100% {width: 0px; height: 0px;}
+  0%   {width: 840px; height: 840px; opacity: 1}
+  85%  {opacity: 1;}
+  100% {width: 0px; height: 0px; opacity: 0}
 }
 
 .bordo_interno {
