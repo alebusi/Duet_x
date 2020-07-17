@@ -1,5 +1,6 @@
 var pos = 0;
 var dir = 0;
+var mod = 1;
 kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
@@ -60,7 +61,18 @@ function disegnaCerchio() {
 }
   
 function bucaCerchio() {
-  xpos=randomIntFromInterval(0,359); document.getElementById("uno").style.transform = "translate(-50%, -50%) rotate("+xpos+"deg)"; 
+  if (mod == 1) {
+     xpos=randomIntFromInterval(0,359); document.getElementById("uno").style.transform = "translate(-50%, -50%) rotate("+xpos+"deg)"; 
+  }
+  else {
+     xpos=randomIntFromInterval(0,359); document.getElementById("due").style.transform = "translate(-50%, -50%) rotate("+xpos+"deg)"; 
+  }
+  if (mod == 1) {
+     mod = 2;
+  }
+  else {
+     mod = 1;
+  }
 }
 
 disegnaCerchio();
