@@ -73,15 +73,15 @@ function posizionaMattone() {
       xpos=randomIntFromInterval(0,2); document.getElementById("uno").style.left = lpos[xpos]+"%";
       break;
     case 2:
-	document.getElementById("due").className="mattone"; }
+	document.getElementById("due").className="mattone";
       xpos=randomIntFromInterval(0,2); document.getElementById("due").style.left = lpos[xpos]+"%";
       break;
     case 3:
-	document.getElementById("tre").className="mattone"; }
+	document.getElementById("tre").className="mattone";
       xpos=randomIntFromInterval(0,2); document.getElementById("tre").style.left = lpos[xpos]+"%";
       break;
     case 4:
-        document.getElementById("quattro").className="mattone"; }
+        document.getElementById("quattro").className="mattone";
       xpos=randomIntFromInterval(0,2); document.getElementById("quattro").style.left = lpos[xpos]+"%";
       break;
   }
