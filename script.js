@@ -1,5 +1,5 @@
 var lpos = [40,50,60];
-var numchar = ["uno","due","tre","quattro"];
+var numcar = ["uno","due","tre","quattro"];
 var pos = 0;
 var dir = 0;
 var mod = 1;
@@ -73,18 +73,23 @@ function posizionaMattone() {
       xpos=randomIntFromInterval(0,2); document.getElementById("uno").style.left = lpos[xpos]+"%";
       break;
     case 2:
+	document.getElementById("due").className="mattone"; }
       xpos=randomIntFromInterval(0,2); document.getElementById("due").style.left = lpos[xpos]+"%";
       break;
     case 3:
+	document.getElementById("tre").className="mattone"; }
       xpos=randomIntFromInterval(0,2); document.getElementById("tre").style.left = lpos[xpos]+"%";
       break;
     case 4:
+        document.getElementById("quattro").className="mattone"; }
       xpos=randomIntFromInterval(0,2); document.getElementById("quattro").style.left = lpos[xpos]+"%";
       break;
   }
 }
 
 disegnaMattone();
+/*
 setTimeout(function(){ document.getElementById("due").className="mattone"; }, 1500);
 setTimeout(function(){ document.getElementById("tre").className="mattone"; }, 1500);
 setTimeout(function(){ document.getElementById("quattro").className="mattone"; }, 1500);
+*/
