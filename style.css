@@ -15,7 +15,7 @@ html, body {
   height: 50px;
   position: absolute;
   transform: translate(-50%, -50%);  
-  animation: mymove_mattone 4s infinite;
+  animation: mymove_mattone 6s infinite;
   animation-timing-function: linear;
 }
 
