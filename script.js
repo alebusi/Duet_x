@@ -1,5 +1,7 @@
 var lpos = [40,50,60];
 var numcar = ["uno","due","tre","quattro"];
+var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","black"];
+var ind_c = 0;
 var pos = 0;
 var dir = 0;
 var mod = 1;
@@ -36,7 +38,7 @@ function keyup_handler(event) {
 
 function muoviElementoT(direction) {
     pos+=direction;
-    document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)"; 
+    document.getElementById("griglia").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)"; 
 }
 
 function muoviElemento(direction) {
@@ -45,13 +47,19 @@ function muoviElemento(direction) {
 		catch(err){}
     myTimer = setInterval(function() {
 		  pos+=direction;
-      document.getElementById("elemento").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)";
+      document.getElementById("griglia").style.transform = "translate(-50%, -50%) rotate("+pos+"deg)";
 	  }, 60);
 }
 
 function resetInt() {
     try {clearInterval(myTimer);}
 		catch(err){}
+}
+
+function cambioColore(td) {
+  ind_c+=1;
+  if (ind_c > colori.length-1) ind_c=0;
+     td.style.backgroundColor = colori[ind_c];
 }
 
 function randomIntFromInterval(min,max) {
