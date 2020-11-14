@@ -81,6 +81,7 @@ function posizionaMattone() {
       xpos=randomIntFromInterval(0,2); document.getElementById("quattro").style.left = lpos[xpos]+"%";
       break;
   }
+}
 
 disegnaMattone();
 setTimeout(function(){ document.getElementById("due").className="mattone"; }, 1500);
