@@ -41,7 +41,7 @@ html, body {
 table {
     border-spacing: 30px;
     border-collapse: separate;
-    top: 50%;
+    top: 85%;
     left: 50%;
     position: absolute;
     -ms-transform: translate(-50%, -50%);
