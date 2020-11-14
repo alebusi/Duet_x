@@ -55,25 +55,24 @@ function randomIntFromInterval(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-function disegnaCerchio() {
+function disegnaMattone() {
     bucaCerchio();
     myTimerCerchio = setInterval(bucaCerchio, 4000);
 }
   
-function bucaCerchio() {
-  if (mod == 1) {
-     xpos=randomIntFromInterval(0,359); document.getElementById("uno").style.transform = "translate(-50%, -50%) rotate("+xpos+"deg)"; 
+function posizionaMattoni() {
+  nx+=1;
+  switch(nx) {
+    case 1:
+      document.getElementById("uno").style.left = "40%";
+      break;
+    case 2:
+      document.getElementById("due").style.left = "50%";
+      break;
+    case 3:
+      document.getElementById("tre").style.left = "60%";
+      break;
   }
-  else {
-     xpos=randomIntFromInterval(0,359); document.getElementById("due").style.transform = "translate(-50%, -50%) rotate("+xpos+"deg)"; 
-  }
-  if (mod == 1) {
-     mod = 2;
-  }
-  else {
-     mod = 1;
-  }
-}
 
-disegnaCerchio();
+disegnaMattone();
 setTimeout(function(){ document.getElementById("due").className="cerchio"; }, 4000);
