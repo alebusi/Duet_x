@@ -12,6 +12,13 @@
   <div id="elemento" class="cerchio"></div>
   <div class="sinistra" ontouchstart="muoviElemento(-6)" ontouchend="resetInt()"></div>
   <div class="destra" ontouchstart="muoviElemento(6)" ontouchend="resetInt()"></div>
+  <table id="griglia" class="vuoto">
+  <tr>
+    <td onclick="cambioColore(this)"></td>
+    <td onclick="cambioColore(this)"></td>
+    <td onclick="cambioColore(this)"></td>
+  </tr>
+  </table>
   <script src="script.js"></script>
 </body>
 </html>
