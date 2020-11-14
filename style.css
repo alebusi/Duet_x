@@ -9,58 +9,18 @@ html, body {
     user-select: none; /* Standard syntax */
 }
 
-#uno {
-  border-top: 14px solid orange;
-  border-left: 14px solid orange;
-  border-right: 14px solid orange;
-  border-bottom: 14px solid black;
-}
-
-#due {
-  border-top: 14px solid lime;
-  border-left: 14px solid lime;
-  border-right: 14px solid lime;
-  border-bottom: 14px solid black;
-}
-
-.cerchio {
-  width: 840px;
-  height: 840px;
-  border-radius: 840px;
+.mattone {
+  width: 200px;
+  height: 50px;
   position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);  
-  animation: mymove_circle 8s infinite;
+  animation: mymove_mattone 4s infinite;
   animation-timing-function: linear;
-
 }
 
-@keyframes mymove_circle {
-  0%   {width: 840px; height: 840px; opacity: 1}
-  80%  {opacity: 1;}
-  100% {width: 0px; height: 0px; opacity: 0}
-}
-
-.bordo_interno {
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
-  background-color: #ff3300;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.triangolino {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+@keyframes mymove_mattone {
+  0%   {top: -25px;}
+  100% {top: 105vh;}
 }
 
 #elemento2 {
