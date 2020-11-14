@@ -1,6 +1,8 @@
+var lpos = [40,50,60];
 var pos = 0;
 var dir = 0;
 var mod = 1;
+var nx = 0;
 kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
@@ -56,23 +58,31 @@ function randomIntFromInterval(min,max) {
 }
 
 function disegnaMattone() {
-    bucaCerchio();
-    myTimerCerchio = setInterval(bucaCerchio, 4000);
+    posizionaMattone();
+    myTimerCerchio = setInterval(posizionaMattone, 1500);
 }
   
-function posizionaMattoni() {
+function posizionaMattone() {
   nx+=1;
+  if (nx > 3) {
+     nx = 1;
+  }
   switch(nx) {
     case 1:
-      document.getElementById("uno").style.left = "40%";
+      xpos=randomIntFromInterval(0,2); document.getElementById("uno").style.left = lpos[xpos]+"%";
       break;
     case 2:
-      document.getElementById("due").style.left = "50%";
+      xpos=randomIntFromInterval(0,2); document.getElementById("due").style.left = lpos[xpos]+"%";
       break;
     case 3:
-      document.getElementById("tre").style.left = "60%";
+      xpos=randomIntFromInterval(0,2); document.getElementById("tre").style.left = lpos[xpos]+"%";
+      break;
+    case 4:
+      xpos=randomIntFromInterval(0,2); document.getElementById("quattro").style.left = lpos[xpos]+"%";
       break;
   }
 
 disegnaMattone();
-setTimeout(function(){ document.getElementById("due").className="cerchio"; }, 4000);
+setTimeout(function(){ document.getElementById("due").className="mattone"; }, 1500);
+setTimeout(function(){ document.getElementById("tre").className="mattone"; }, 1500);
+setTimeout(function(){ document.getElementById("quattro").className="mattone"; }, 1500);
