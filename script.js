@@ -1,4 +1,5 @@
 var lpos = [40,50,60];
+var numchar = ["uno","due","tre","quattro"];
 var pos = 0;
 var dir = 0;
 var mod = 1;
@@ -64,7 +65,7 @@ function disegnaMattone() {
   
 function posizionaMattone() {
   nx+=1;
-  if (nx > 3) {
+  if (nx > 4) {
      nx = 1;
   }
   switch(nx) {
