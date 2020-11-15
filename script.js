@@ -1,4 +1,4 @@
-var lpos = [40,50,60];
+var lpos = ["-175","-50","+75"];
 var numcar = ["uno","due","tre","quattro"];
 var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","black"];
 var ind_c = 0;
@@ -76,9 +76,12 @@ function posizionaMattone() {
   if (nx > 4) {
      nx = 1;
   }
+  xpos=randomIntFromInterval(0,2);
+  document.getElementById(numcar[nx]).style.transform = "translate(-50%,"+lpos[xpos]+"%)";
+  /*
   switch(nx) {
     case 1:
-      xpos=randomIntFromInterval(0,2); document.getElementById("uno").style.left = lpos[xpos]+"%";
+      xpos=randomIntFromInterval(0,2); document.getElementById(numcar[nx]).style.transform = "translate(-50%,"+lpos+"%)";
       break;
     case 2:
 	document.getElementById("due").className="mattone";
@@ -92,7 +95,7 @@ function posizionaMattone() {
         document.getElementById("quattro").className="mattone";
       xpos=randomIntFromInterval(0,2); document.getElementById("quattro").style.left = lpos[xpos]+"%";
       break;
-  }
+  } */
 }
 
 disegnaMattone();
