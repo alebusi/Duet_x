@@ -78,7 +78,7 @@ function posizionaMattone() {
   }
   xpos=randomIntFromInterval(0,2);
   document.getElementById(numcar[nx]).className="mattone";
-  document.getElementById(numcar[nx]).style.transform = "translate(-50%,"+lpos[xpos]+"%)";
+  document.getElementById(numcar[nx]).style.transform = "translate(-50%, -50%)";
   /*
   switch(nx) {
     case 1:
