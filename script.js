@@ -5,7 +5,7 @@ var ind_c = 0;
 var pos = 0;
 var dir = 0;
 var mod = 1;
-var nx = 0;
+var nx = -1;
 kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
@@ -73,12 +73,12 @@ function disegnaMattone() {
   
 function posizionaMattone() {
   nx+=1;
-  if (nx > 4) {
-     nx = 1;
+  if (nx > 3) {
+     nx = 0;
   }
   xpos=randomIntFromInterval(0,2);
   document.getElementById(numcar[nx]).className="mattone";
-  document.getElementById(numcar[nx]).style.transform = "translate(-50%, -50%)"; //+lpos[xpos]+"%)";
+  document.getElementById(numcar[nx]).style.transform = "translate(-50%,"+lpos[xpos]+"%)";
   /*
   switch(nx) {
     case 1:
