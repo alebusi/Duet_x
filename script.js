@@ -77,7 +77,7 @@ function posizionaMattone() {
      nx = 1;
   }
   xpos=randomIntFromInterval(0,2);
-  document.getElementById(numcar[nx]).style.transform = "translate(-50%,"+lpos[xpos]+"%)";
+  document.getElementById(numcar[nx]).style.transform = "translate(-50%, -50%"); //+lpos[xpos]+"%)";
   /*
   switch(nx) {
     case 1:
