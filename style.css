@@ -11,8 +11,8 @@ html, body {
 
 .mattone {
   background-color: red;
-  width: 200px;
-  height: 50px;
+  width: 100px;
+  height: 30px;
   position: absolute;
   transform: translate(-50%, -50%);  
   animation: mymove_mattone 6s infinite;
@@ -39,9 +39,9 @@ html, body {
 }
 
 table {
-    border-spacing: 30px;
+    border-spacing: 50px;
     border-collapse: separate;
-    top: 85%;
+    top: 80%;
     left: 50%;
     position: absolute;
     -ms-transform: translate(-50%, -50%);
@@ -49,9 +49,9 @@ table {
 }
 
 td {
-  width: 20px;
-  height: 20px;
-  border-radius: 80px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
   background-color: white;
 }
 
