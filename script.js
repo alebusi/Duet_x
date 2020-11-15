@@ -16,10 +16,10 @@ function keypress_handler(event) {
     if (!this.kd) {
 	this.kd = true;
         if (event.keyCode == 37) {
-          dir = -6;
+          dir = -8;
         }
         if (event.keyCode == 39) {
-          dir = 6;
+          dir = 8;
         }
         sterza = setInterval(function() {
 		muoviElementoT(dir);
