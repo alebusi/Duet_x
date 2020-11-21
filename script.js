@@ -1,6 +1,6 @@
 var lpos = ["-175","-50","+75"];
 var numcar = ["uno","due","tre","quattro"];
-var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","black"];
+var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","transparent"];
 var ind_c = 0;
 var pos = 0;
 var dir = 0;
