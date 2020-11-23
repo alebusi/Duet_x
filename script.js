@@ -92,7 +92,7 @@ function coloreMattone() {
 }
 
 function ruotaPagina() {
-  document.getElementById("bf").style.transform = "rotate(180deg)";
+  document.getElementById("bd").style.transform = "rotate(180deg)";
   document.getElementById("sinistra").style.transform = "translate(50vw,0)";
   document.getElementById("destra").style.transform = "translate(-50vw,0)";
 }
