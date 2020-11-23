@@ -82,13 +82,17 @@ function posizionaMattone() {
   document.getElementById(numcar[nx]).style.transform = "translate("+lpos[xpos]+"px, -50%)";
 }
 
-function cambioColoreMattone() {
+function coloreMattone() {
   ind_cm+=1;
   if (ind_cm > colori.length-1) ind_cm=0;
   document.getElementById("uno").style.backgroundColor=colori[ind_cm];
   document.getElementById("due").style.backgroundColor=colori[ind_cm];
   document.getElementById("tre").style.backgroundColor=colori[ind_cm];
   document.getElementById("quattro").style.backgroundColor=colori[ind_cm];
+}
+
+function ruotaPagina() {
+  document.getElementById("bd").style.transform = "rotate(180deg)";
 }
 
 disegnaMattone();
