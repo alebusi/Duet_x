@@ -56,3 +56,18 @@ td {
     left: 50vw;
     touch-action: none;
 }
+
+#tastoColoreMattone {
+    position: fixed; 
+    width: 10vw;
+    height: 10vh;
+    top: 0vh;
+    left: 90vw;
+}
+#tastoColoreMattone:hover {
+  animation: mymoveSelection 1s;
+}
+@keyframes mymoveSelection {
+  0%   {background-color: white;}
+  100% {background-color: black;}
+}
