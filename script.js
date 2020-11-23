@@ -2,6 +2,7 @@ var lpos = ["-175","-50","+75"];
 var numcar = ["uno","due","tre","quattro"];
 var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","transparent"];
 var ind_c = 0;
+var ind_cm = 0;
 var pos = 0;
 var dir = 0;
 var mod = 1;
@@ -79,29 +80,15 @@ function posizionaMattone() {
   xpos=randomIntFromInterval(0,2);
   document.getElementById(numcar[nx]).className="mattone";
   document.getElementById(numcar[nx]).style.transform = "translate("+lpos[xpos]+"px, -50%)";
-  /*
-  switch(nx) {
-    case 1:
-      xpos=randomIntFromInterval(0,2); document.getElementById(numcar[nx]).style.transform = "translate(-50%,"+lpos+"%)";
-      break;
-    case 2:
-	document.getElementById("due").className="mattone";
-      xpos=randomIntFromInterval(0,2); document.getElementById("due").style.left = lpos[xpos]+"%";
-      break;
-    case 3:
-	document.getElementById("tre").className="mattone";
-      xpos=randomIntFromInterval(0,2); document.getElementById("tre").style.left = lpos[xpos]+"%";
-      break;
-    case 4:
-        document.getElementById("quattro").className="mattone";
-      xpos=randomIntFromInterval(0,2); document.getElementById("quattro").style.left = lpos[xpos]+"%";
-      break;
-  } */
+}
+
+function cambioColoreMattone() {
+  ind_cm+=1;
+  if (ind_cm > colori.length-1) ind_cm=0;
+  document.getElementById("uno").style.backgroundColor=colori[ind_cm];
+  document.getElementById("due").style.backgroundColor=colori[ind_cm];
+  document.getElementById("tre").style.backgroundColor=colori[ind_cm];
+  document.getElementById("quattro").style.backgroundColor=colori[ind_cm];
 }
 
 disegnaMattone();
-/*
-setTimeout(function(){ document.getElementById("due").className="mattone"; }, 1500);
-setTimeout(function(){ document.getElementById("tre").className="mattone"; }, 1500);
-setTimeout(function(){ document.getElementById("quattro").className="mattone"; }, 1500);
-*/
