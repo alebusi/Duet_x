@@ -8,6 +8,7 @@ var dir = 0;
 var mod = 1;
 var nx = -1;
 kd = false;
+ruota = false;
 
 window.addEventListener("keydown", keypress_handler, false);
 window.addEventListener("keyup", keyup_handler, false);
@@ -92,9 +93,18 @@ function coloreMattone() {
 }
 
 function ruotaPagina() {
-  document.getElementById("bd").style.transform = "rotate(180deg)";
-  document.getElementById("sinistra").style.transform = "translate(50vw,0)";
-  document.getElementById("destra").style.transform = "translate(-50vw,0)";
+  if (!ruota) {
+    document.getElementById("bd").style.transform = "rotate(180deg)";
+    document.getElementById("sinistra").style.transform = "translate(50vw,0)";
+    document.getElementById("destra").style.transform = "translate(-50vw,0)";
+    ruota=true;
+  }
+  else
+    document.getElementById("bd").style.transform = "rotate(0deg)";
+    document.getElementById("sinistra").style.transform = "translate(0,0)";
+    document.getElementById("destra").style.transform = "translate(0,0)";
+    ruota=false;
+  }
 }
 
 disegnaMattone();
