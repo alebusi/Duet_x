@@ -99,7 +99,7 @@ function ruotaPagina() {
     document.getElementById("destra").style.transform = "translate(-50vw,0)";
     ruota=true;
   }
-  else
+  else {
     document.getElementById("bd").style.transform = "rotate(0deg)";
     document.getElementById("sinistra").style.transform = "translate(0,0)";
     document.getElementById("destra").style.transform = "translate(0,0)";
