@@ -9,6 +9,52 @@ html, body {
     user-select: none; /* Standard syntax */
 }
 
+.sx, .cx, .dx, .doppio {
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  left: 50%;
+  position: absolute;
+  animation: mymove_mattone 6s infinite;
+  animation-timing-function: linear;
+}
+
+.sx, .doppio {
+  transform: translate(-175px, -50%); 
+}
+
+.cx {
+  transform: translate(-50px, -50%); 
+}
+
+.dx {
+  transform: translate(+75px, -50%); 
+}
+
+.verticale {
+  background-color: white;
+  width: 30px;
+  height: 100px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50px, -50%);
+  animation: mymove_mattone 6s infinite;
+  animation-timing-function: linear;
+}
+
+.doppio::after {
+  content: "";
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  animation: mymove_mattone 6s infinite;
+  animation-timing-function: linear;
+  transform: translate(+250px, -50%);
+}
+
 .mattone {
   background-color: white;
   width: 100px;
