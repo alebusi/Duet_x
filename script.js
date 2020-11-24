@@ -1,4 +1,5 @@
-var lpos = ["-175","-50","+75"];
+//var lpos = ["-175","-50","+75"];
+var mattoni = ["sx","dx","cx","doppio","verticale"];
 var numcar = ["uno","due","tre","quattro"];
 var colori = ["white","#FF3300","orange","#4285F4","#0F9D58","transparent"];
 var ind_c = 0;
@@ -78,9 +79,9 @@ function posizionaMattone() {
   if (nx > 3) {
      nx = 0;
   }
-  xpos=randomIntFromInterval(0,2);
-  document.getElementById(numcar[nx]).className="mattone";
-  document.getElementById(numcar[nx]).style.transform = "translate("+lpos[xpos]+"px, -50%)";
+  ind_m=randomIntFromInterval(0,length(mattoni)-1);
+  document.getElementById(numcar[nx]).className=mattoni[ind_m];
+  //document.getElementById(numcar[nx]).style.transform = "translate("+lpos[xpos]+"px, -50%)";
 }
 
 function coloreMattone() {
