@@ -79,8 +79,8 @@ function posizionaMattone() {
   if (nx > 3) {
      nx = 0;
   }
-  ind_m=randomIntFromInterval(0,length(mattoni)-1);
-	alert("ind_m "+ind_m+"classe "+mattoni[ind_m]);
+  ind_m=randomIntFromInterval(0,mattoni.length-1);
+	//alert("ind_m "+ind_m+"classe "+mattoni[ind_m]);
   document.getElementById(numcar[nx]).className=mattoni[ind_m];
   //document.getElementById(numcar[nx]).style.transform = "translate("+lpos[xpos]+"px, -50%)";
 }
